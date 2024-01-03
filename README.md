@@ -8,6 +8,12 @@ self-screen-spy
 
 -- <https://sdrinf.com/age-of-attention>
 
+dependencies
+-------------------------------------------------------------------------------
+
+- `snapshot.sh`: <https://en.wikipedia.org/wiki/Scrot>
+- `compile.sh`: <https://en.wikipedia.org/wiki/FFmpeg>
+
 usage
 -------------------------------------------------------------------------------
 
