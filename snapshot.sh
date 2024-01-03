@@ -2,8 +2,8 @@
 
 set -e
 
-QUALITY=10     # 10-100
-COMPRESSION=0  # Doesn't matter for JPEG, since "quality" bundles compression.
+QUALITY=10     # 10-100. Ignored for PNG, which is lossless.
+COMPRESSION=0  # 0-9. Ignored for JPEG, where "quality" bundles compression.
 FORMAT=jpeg    # jpeg | png
 
 DATA_DIR_NAME=data
