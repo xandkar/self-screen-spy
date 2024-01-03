@@ -19,4 +19,9 @@ out_file_path="$data_dir_path"/"$out_file_name"
 
 mkdir -p "$data_dir_path"
 cd "$data_dir_path"
-DISPLAY=:0 scrot --quality "$QUALITY" --compression "$COMPRESSION" --format "$FORMAT" "$out_file_path"
+
+if [ "$XDG_SESSION_TYPE" = wayland ]; then
+    grim -t "$FORMAT" "$out_file_path"
+else
+    DISPLAY=:0 scrot --quality "$QUALITY" --compression "$COMPRESSION" --format "$FORMAT" "$out_file_path"
+fi
