@@ -18,7 +18,7 @@ main() {
             # printf '[debug] %s ---> %s\n' "$snapshot_file_path" "$seq_file_path" >&2
             cp "$snapshot_file_path" "$seq_file_path"
         done < <(find "$day_data_dir_path" -mindepth 1 -maxdepth 1 -type f -iname "*.${snapshot_file_ext}" | sort)
-        ffmpeg -nostdin -framerate 24 -i "$temp_dir_path"/"$snapshot_seq_pattern"."$snapshot_file_ext" -c:v libx264 -pix_fmt yuv420p "$day".mp4
+        ffmpeg -y -nostdin -framerate 24 -i "$temp_dir_path"/"$snapshot_seq_pattern"."$snapshot_file_ext" -c:v libx264 -pix_fmt yuv420p "$day".mp4
     done < <(find "$data_dir_path" -mindepth 1 -maxdepth 1 -type d | sort)
 }
 
