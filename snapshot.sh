@@ -2,9 +2,10 @@
 
 set -e
 
-QUALITY=10
-COMPRESSION=2
-FORMAT=jpeg
+QUALITY=10     # 10-100
+COMPRESSION=0  # Doesn't matter for JPEG, since "quality" bundles compression.
+FORMAT=jpeg    # jpeg | png
+
 DATA_DIR_NAME=data
 
 datestamp=$(TZ=America/New_York date +%F)
