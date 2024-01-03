@@ -11,7 +11,9 @@ self-screen-spy
 dependencies
 -------------------------------------------------------------------------------
 
-- `snapshot.sh`: <https://en.wikipedia.org/wiki/Scrot>
+- `snapshot.sh`: 
+  - <https://en.wikipedia.org/wiki/Scrot> for X11
+  - <https://git.sr.ht/~emersion/grim> for Wayland
 - `compile.sh`: <https://en.wikipedia.org/wiki/FFmpeg>
 
 usage
