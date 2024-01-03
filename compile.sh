@@ -20,6 +20,7 @@ main() {
             cp "$snapshot_file_path" "$seq_file_path"
         done < <(find "$day_data_dir_path" -mindepth 1 -maxdepth 1 -type f -iname "*.${snapshot_file_ext}" | sort)
         ffmpeg -y -nostdin -framerate "$framerate" -i "$temp_dir_path"/"$snapshot_seq_pattern"."$snapshot_file_ext" -c:v libx264 -pix_fmt yuv420p "$day".mp4
+        rm -r "$temp_dir_path"
     done < <(find "$data_dir_path" -mindepth 1 -maxdepth 1 -type d | sort)
 }
 
